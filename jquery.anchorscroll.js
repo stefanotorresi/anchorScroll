@@ -4,7 +4,8 @@
 
         var defaults = {
             speed: 700,
-            fx: "swing"
+            fx: "swing",
+            offset: 0
         };
 
         var options = $.extend(defaults, options);
@@ -24,6 +25,10 @@
                 }
 
                 var destination = $(target).offset().top;
+                
+                if (options.offset) {
+                    destination += parseInt(options.offset);
+                }
 
                 if (navigator.userAgent.match(/OS 5(_\d)+ like Mac OS X/i)) {
                     $("body").append('<div id="ios5fix" style="height: 200px"></div>');
