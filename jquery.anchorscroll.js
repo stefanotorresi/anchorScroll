@@ -39,6 +39,7 @@
                 $("html, body").stop(true).animate({scrollTop: destination}, options.speed, options.fx, function(){
                     $(window).data('anchorscrolling', false);
                     $("#ios5fix").remove();
+                    return true;
                 });
 
                 return false;
