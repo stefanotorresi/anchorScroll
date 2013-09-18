@@ -30,13 +30,13 @@
 
             $(window).data('anchorscrolling', true);
 
-            $("html, body").stop(true).animate({scrollTop: destination}, anchorScroll.options.speed, anchorScroll.options.fx, function(){
+            $("body").stop(true).animate({scrollTop: destination}, anchorScroll.options.speed, anchorScroll.options.fx, function(){
                 $(window).data('anchorscrolling', false);
                 $("#ios5fix").remove();
                 if (anchorScroll.options.updateHref) {
                     anchorScroll.updateLocationHref();
                 }
-                $.proxy(anchorScroll.options.callback, anchorScroll, target);
+                $.proxy(anchorScroll.options.callback, anchorScroll, target).call();
             });
 
             return false;
