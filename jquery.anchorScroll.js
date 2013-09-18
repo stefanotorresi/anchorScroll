@@ -7,7 +7,7 @@
             fx: "swing",
             offset: 0,
             updateHref: true,
-            callback: function(){}
+            callback: function(target){}
         };
 
         this.options = $.extend(defaults, options);
@@ -36,7 +36,7 @@
                 if (anchorScroll.options.updateHref) {
                     anchorScroll.updateLocationHref();
                 }
-                anchorScroll.options.callback(target, anchorScroll);
+                $.proxy(anchorScroll.options.callback, anchorScroll, target);
             });
 
             return false;
