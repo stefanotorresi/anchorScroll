@@ -30,7 +30,7 @@
 
             $(window).data('anchorscrolling', true);
 
-            $("body").stop(true).animate({scrollTop: destination}, anchorScroll.options.speed, anchorScroll.options.fx, function(){
+            $("body,html").stop(true).animate({scrollTop: destination}, anchorScroll.options.speed, anchorScroll.options.fx, function(){
                 $(window).data('anchorscrolling', false);
                 $("#ios5fix").remove();
                 if (anchorScroll.options.updateHref) {
