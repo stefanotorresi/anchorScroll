@@ -1,0 +1,28 @@
+{
+  "name": "anchorScroll",
+  "version": "1.2.0",
+  "homepage": "https://github.com/stefanotorresi/anchorScroll",
+  "authors": [
+    "Stefano Torresi <webdev@stefanotorresi.it>"
+  ],
+  "description": "jQuery anchor scroll animation plugin",
+  "main": "jquery.anchorScroll.js",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "anchor",
+    "scroll",
+    "animation"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.8.3"
+  }
+}
